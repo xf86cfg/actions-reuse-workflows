@@ -1,0 +1,17 @@
+name: Call a reusable workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  call-workflow-passing-data:
+    uses: xf86cfg/actions-reuse-workflows/.github/workflows/workflow-B.yml@main
+    with:
+      username: mona
+    secrets:
+      token: ${{ secrets.TOKEN }}
