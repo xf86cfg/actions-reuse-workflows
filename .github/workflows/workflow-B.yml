@@ -15,7 +15,12 @@ jobs:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/my-action@v1
+      - name: Step one
+        run: |
+          echo ${{ inputs.username }}
+          echo ${{ secrets.token }}
+          echo ${{ username }}
+          echo ${{ token }}
         with:
           username: ${{ inputs.username }}
           token: ${{ secrets.token }}
