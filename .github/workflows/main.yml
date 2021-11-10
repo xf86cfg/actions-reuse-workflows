@@ -13,5 +13,3 @@ jobs:
     uses: xf86cfg/actions-reuse-workflows/.github/workflows/workflow-B.yml@main
     with:
       username: mona
-    secrets:
-      token: ${{ secrets.TOKEN }}

@@ -6,9 +6,6 @@ on:
       username:
         required: true
         type: string
-    secrets:
-      token:
-        required: true
 
 jobs:
   example_job:
@@ -18,9 +15,3 @@ jobs:
       - name: Step one
         run: |
           echo ${{ inputs.username }}
-          echo ${{ secrets.token }}
-          echo ${{ username }}
-          echo ${{ token }}
-        with:
-          username: ${{ inputs.username }}
-          token: ${{ secrets.token }}
